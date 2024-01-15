@@ -1,9 +1,12 @@
-from typing import Annotated
-
-from fastapi import Body, FastAPI
-from pydantic import BaseModel
+from fastapi import FastAPI
+from pydantic import BaseModel, HttpUrl
 
 app = FastAPI()
+
+
+class Image(BaseModel):
+    url: HttpUrl
+    name: str
 
 
 class Item(BaseModel):
@@ -11,23 +14,17 @@ class Item(BaseModel):
     description: str | None = None
     price: float
     tax: float | None = None
+    tags: set[str] = set()
+    images: list[Image] | None = None
 
 
-class User(BaseModel):
-    username: str
-    full_name: str | None = None
+class Offer(BaseModel):
+    name: str
+    description: str | None = None
+    price: float
+    items: list[Item]
 
 
-@app.put("/items/{item_id}")
-async def update_item(
-    *,
-    item_id: int,
-    item: Item,
-    user: User,
-    importance: Annotated[int, Body(gt=0)],
-    q: str | None = None,
-):
-    results = {"item_id": item_id, "item": item, "user": user, "importance": importance}
-    if q:
-        results.update({"q": q})
-    return results
+@app.post("/offers/")
+async def create_offer(offer: Offer):
+    return offer
