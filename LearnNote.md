@@ -84,4 +84,11 @@ from fastapi import Body
 
 你还可以声明将作为请求体的一部分所接收的单一值。
 
-你还可以指示 FastAPI 在仅声明了一个请求体参数的情况下，将原本的请求体嵌入到一个键中。
+你还可以指示 FastAPI 在仅声明了一个请求体参数的情况下，将原本的请求体嵌入到一个键中
+
+### lesson 8 请求体-字段
+from pydantic import BaseModel, Field
+你可以使用 Pydantic 的 Field 为模型属性声明额外的校验和元数据。
+
+你还可以使用额外的关键字参数来传递额外的 JSON Schema 元数据。
+
