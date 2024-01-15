@@ -75,3 +75,13 @@ ge：大于等于（greater than or equal）
 lt：小于（less than）
 le：小于等于（less than or equal）
 
+### lesson 7 请求体-多个参数
+https://fastapi.tiangolo.com/zh/tutorial/body-multiple-params/
+from fastapi import Body
+你可以添加多个请求体参数到路径操作函数中，即使一个请求只能有一个请求体。
+
+但是 FastAPI 会处理它，在函数中为你提供正确的数据，并在路径操作中校验并记录正确的模式。
+
+你还可以声明将作为请求体的一部分所接收的单一值。
+
+你还可以指示 FastAPI 在仅声明了一个请求体参数的情况下，将原本的请求体嵌入到一个键中。
