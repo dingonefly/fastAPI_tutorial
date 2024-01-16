@@ -103,3 +103,5 @@ from pydantic import BaseModel, Field
 模式文档
 自动生成的文档
 
+### lesson 10 模式的额外信息-例子
+所以，虽然 example 不是JSON Schema的一部分，但它是OpenAPI的一部分，这将被文档UI使用。
