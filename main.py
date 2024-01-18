@@ -1,5 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Header
 from pydantic import BaseModel, HttpUrl, Field
+from typing import Annotated
 
 app = FastAPI()
 
@@ -28,3 +29,10 @@ class Offer(BaseModel):
 @app.post("/offers/")
 async def create_offer(offer: Offer):
     return offer
+
+
+@app.get("/header/items/")
+async def get_items(user_agent: Annotated[str | None, Header()] = None):
+    return {
+        "User_agent": user_agent
+    }

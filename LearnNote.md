@@ -109,4 +109,5 @@ from pydantic import BaseModel, Field
 ### lesson 11 额外的数据类型
 UUID datetime.datetime
 
-### lesson 12 cookie 
+### lesson 12 cookie & header
+from fastapi import FastAPI, Header
