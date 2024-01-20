@@ -111,3 +111,48 @@ UUID datetime.datetime
 
 ### lesson 12 cookie & header
 from fastapi import FastAPI, Header
+
+### lesson 13 reponse & form & file
+response_model
+status_code
+
+OAuth2 规范的 "密码流" 模式规定要通过表单字段发送 username 和 password
+from fastapi import FastAPI, File, UploadFile
+
+### lesson 14 错误处理
+HTTPException
+
+### lesson 15 路径操作配置
+status_code tags summary description docstring
+通过传递参数给路径操作装饰器 ，即可轻松地配置路径操作、添加元数据
+
+### lesson 16 Json 兼容器
+from fastapi.encoders import jsonable_encoder
+
+### lesson 17 PUT & PATCH
+
+### lesson 18 依赖项
+依赖注入常用于以下场景：
+
+共享业务逻辑（复用相同的代码逻辑）
+共享数据库连接
+实现安全、验证、角色权限
+等……
+上述场景均可以使用依赖注入，将代码重复最小化。
+
+依赖注入系统如此简洁的特性，让 FastAPI 可以与下列系统兼容：
+
+关系型数据库
+NoSQL 数据库
+外部支持库
+外部 API
+认证和鉴权系统
+API 使用监控系统
+响应数据注入系统
+等等……
+
+- 类作为依赖项
+- 子依赖项
+- 路径操作装饰器依赖项
+- 全局依赖项
+- yield 依赖项
