@@ -156,3 +156,18 @@ API 使用监控系统
 - 路径操作装饰器依赖项
 - 全局依赖项
 - yield 依赖项
+
+FastAPI supports dependencies that do some extra steps after finishing.
+To do this, use yield instead of return, and write the extra steps (code) after.
+
+### lesson 19 安全性
+- Oauth2
+- OpenID Connect
+- OpenAPI 
+ - apiKey
+ - http
+ - oauth2
+ - openIdConnect
+FastAPI 在 fastapi.security 模块中为每个安全方案提供了几种工具，这些工具简化了这些安全机制的使用方法。
+ -  JWT 令牌（Token）和安全密码哈希（Hash）实现真正的安全机制。
+
