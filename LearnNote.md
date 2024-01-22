@@ -171,3 +171,7 @@ To do this, use yield instead of return, and write the extra steps (code) after.
 FastAPI 在 fastapi.security 模块中为每个安全方案提供了几种工具，这些工具简化了这些安全机制的使用方法。
  -  JWT 令牌（Token）和安全密码哈希（Hash）实现真正的安全机制。
 
+### lesssn 20 中间件 & CORS
+
+### lesson 21 SQL数据库
+大部分代码是SQLAlchemy的标准代码，您可以用于任何框架。FastAPI特定的代码和往常一样少。
