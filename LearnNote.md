@@ -184,3 +184,6 @@ FastAPI 在 fastapi.security 模块中为每个安全方案提供了几种工具
 - 标签tags
 - 使用 StaticFiles从目录中自动提供静态文件
 
+### lesson 24 测试和调试
+- TestClient
+
