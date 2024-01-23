@@ -178,3 +178,9 @@ FastAPI 在 fastapi.security 模块中为每个安全方案提供了几种工具
 
 ### lesson 22 更大的应用，多个文件
 项目组织方式 
+
+### lesson 23 后台任务、元数据、静态文件
+- 导入并使用 BackgroundTasks 通过 路径操作函数 中的参数和依赖项来添加后台任务。
+- 标签tags
+- 使用 StaticFiles从目录中自动提供静态文件
+
